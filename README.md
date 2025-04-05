@@ -1,26 +1,142 @@
-# 🔐 Secure Password Generator using @stdlib/random
+# 🔐 Secure Password Generator
 
-This is a simple, secure, and customizable password generator web app that uses [`@stdlib/random` library](https://www.npmjs.com/package/@stdlib/random) to generate random passwords. It features a clean UI (built with Tailwind CSS) and a Node.js + Express backend API.
+A secure, customizable password generator with a simple web interface and a Node.js + Express backend powered by [`@stdlib/random`](https://www.npmjs.com/package/@stdlib/random). Generate strong, random passwords with full control over length, character types, and more.
 
 ---
 
 ## 🚀 Features
 
-- Generate strong passwords of custom length
-- Toggle inclusion of:
-  - ✅ Uppercase letters (A-Z)
-  - ✅ Numbers (0-9)
-  - ✅ Symbols (!@#$%^&)
-- Copy to clipboard functionality
-- Uses `@stdlib/random/base/uniform` for secure random number generation
+- Generate strong, secure passwords instantly
+- Customization options:
+  - 🔢 Length: 4–128 characters
+  - 🔠 Include uppercase letters (A–Z)
+  - 🔡 Include lowercase letters (a–z)
+  - 🔢 Include numbers (0–9)
+  - 🔣 Include symbols (!@#$%^&\* etc.)
+- 🔐 Cryptographically secure random generation using `@stdlib/random/base/discrete-uniform`
+- 🌐 Web interface + API support
 
 ---
 
-## 📦 stdlib Module Used
+## 🌐 Demo (Local Setup)
 
-This project uses the [`@stdlib/random/base/uniform`](https://www.npmjs.com/package/@stdlib/random-base-uniform) module to generate secure random integers for indexing characters from the password charset.
+````bash
+git clone https://github.com/dipexplorer/password-generator-stdlib.git
+cd password-generator-stdlib
+npm install
+npm start
 
-```js
-const rand = require("@stdlib/random/base/uniform");
-const index = rand(0, charset.length - 1);
-```
+Then open: http://localhost:8000
+
+📦 Tech Stack
+Layer	Technology
+Frontend	HTML + Tailwind CSS + Vanilla JS
+Backend	Node.js + Express
+Randomness	@stdlib/random/base/discrete-uniform
+
+⚙️ API Usage
+Endpoint: POST /api/generate-password
+
+Request Body:
+{
+  "length": 16,
+  "uppercase": true,
+  "lowercase": true,
+  "digits": true,
+  "special": true
+}
+
+Respond:
+{
+  "password": "A$9gD!z03e7L#mT2"
+}
+
+If no character types are selected, the API returns:
+
+{
+  "error": "At least one character type must be selected."
+}
+
+🧠 How It Works
+The user selects password criteria.
+
+The backend compiles a character set based on selected options.
+
+The @stdlib/random/base/discrete-uniform module is used to securely generate random indices.
+
+Characters are picked randomly from the set to form a secure password.
+
+The generated password is returned to the frontend or API client.
+
+
+📁 Project Structure
+password-generator-stdlib/
+│
+├── public/
+│   └── index.html         # Frontend UI
+├── server.js              # Express backend & API logic
+├── package.json           # Project dependencies
+├── .gitignore             # Ignored files
+└── README.md              # This file
+
+
+🛠️ Installation
+# Clone the repository (if you haven't already)
+```bash
+git clone [https://github.com/dipexplorer/password-generator-stdlib.git](https://github.com/dipexplorer/password-generator-stdlib.git)
+cd password-generator-stdlib
+
+# Install dependencies
+
+npm install
+
+# Start the server
+npm start
+
+The application will be running at http://localhost:8000.
+
+Note: The @stdlib/random package should be listed as a dependency in your package.json file. If not, you might need to run npm install @stdlib/random separately.
+```bash
+npm install @stdlib/random
+
+
+🤝 Contribution Guide
+We welcome contributions! 🙌
+
+Fork the repository
+
+Clone your fork:
+
+```bash
+git clone <your-fork-url>
+Create a new branch:
+
+```bash
+git checkout -b feature/your-feature-name
+Commit your changes:
+
+```bash
+git commit -am "Add new feature"
+Push to your fork:
+
+```bash
+git push origin feature/your-feature-name
+Open a Pull Request 🎉
+
+
+
+📜 License
+This project is licensed under the MIT License.
+Feel free to use, modify, and share this for personal or professional use.
+
+Consider adding a full LICENSE file to your repository for clarity.
+
+🙌 Acknowledgements
+stdlib JS – For the secure random number generation
+
+Tailwind CSS – For the utility-first CSS framework
+
+Express.js – For the Node.js web application framework
+
+
+````
