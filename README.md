@@ -102,16 +102,36 @@ We chose `@stdlib/random/base/discrete-uniform` over `Math.random()` because:
 This helps showcase how `@stdlib` provides superior alternatives for common operations.
 ```
 
-🧠 **How It Works**
-The user selects password criteria.
+📌 ## Stdlib Password Generator Demo
+This repo shows how you can build a simple, secure password generator using the @stdlib/random library. At its core, it uses the @stdlib/random/base/discrete-uniform function to randomly generate passwords based on user-selected options like length, symbols, numbers, and letter casing.
 
-The backend compiles a character set based on selected options.
+Here’s what the project covers:
 
-The @stdlib/random/base/discrete-uniform module is used to securely generate random indices.
+- Using @stdlib/random to safely create strong, random passwords in JavaScript
 
-Characters are picked randomly from the set to form a secure password.
+- A practical example of using @stdlib in a real-world backend app
 
-The generated password is returned to the frontend or API client.
+- A full working example with both frontend and backend components so users can try it out themselves
+
+🧠 ## How It Works
+
+- The user chooses the password settings (length, character types, etc).
+
+- The backend then builds a pool of characters based on those settings.
+
+- Using @stdlib/random/base/discrete-uniform, the app picks random indices to select characters from that pool.
+
+- Once the password is built, it's sent back to the frontend or any connected client.
+
+### 🔬 Why `@stdlib/random/base/discrete-uniform`?
+
+We chose `@stdlib/random/base/discrete-uniform` over `Math.random()` because:
+
+- It provides a uniform distribution over integers
+- It offers better control and safety in cryptographic-like scenarios
+- It's part of the reliable and well-tested `@stdlib` library
+
+This helps showcase how `@stdlib` provides superior alternatives for common operations.
 
 📁** Project Structure**
 
