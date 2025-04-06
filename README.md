@@ -28,23 +28,24 @@ npm start
 Then open: http://localhost:8000
 ```
 
-📦 **Tech Stack**
+## 📦 Tech Stack
 
 ```bash
-**Layer	**      **Technology**
-**Frontend**  	HTML + Tailwind CSS + Vanilla JS
-**Backend**    	Node.js + Express
-**Randomness**	@stdlib/random/base/discrete-uniform
+Layer	    Technology
+Frontend  	HTML + Tailwind CSS + Vanilla JS
+Backend    	Node.js + Express
+Randomness	@stdlib/random/base/discrete-uniform
 ```
 
-⚙️ **API Usage**
+## ⚙️ API Usage
 
 ```bash
 Endpoint: POST /api/generate-password
 ```
 
+### Request Body:
+
 ```bash
-**Request Body:**
 {
   "length": 16,
   "uppercase": true,
@@ -54,7 +55,7 @@ Endpoint: POST /api/generate-password
 }
 ```
 
-**Respond:**
+### Respond:
 
 ```bash
 {
@@ -68,42 +69,11 @@ If no character types are selected, the API returns:
 {
   "error": "At least one character type must be selected."
 }
-
-
-📌 ##  Stdlib Password Generator Demo
-This repo shows how you can build a simple, secure password generator using the @stdlib/random library. At its core, it uses the @stdlib/random/base/discrete-uniform function to randomly generate passwords based on user-selected options like length, symbols, numbers, and letter casing.
-
-Here’s what the project covers:
-
-- Using @stdlib/random to safely create strong, random passwords in JavaScript
-
-- A practical example of using @stdlib in a real-world backend app
-
-- A full working example with both frontend and backend components so users can try it out themselves
-
-
-🧠 ## How It Works
-- The user chooses the password settings (length, character types, etc).
-
-- The backend then builds a pool of characters based on those settings.
-
-- Using @stdlib/random/base/discrete-uniform, the app picks random indices to select characters from that pool.
-
-- Once the password is built, it's sent back to the frontend or any connected client.
-
-
-### 🔬 Why `@stdlib/random/base/discrete-uniform`?
-
-We chose `@stdlib/random/base/discrete-uniform` over `Math.random()` because:
-- It provides a uniform distribution over integers
-- It offers better control and safety in cryptographic-like scenarios
-- It's part of the reliable and well-tested `@stdlib` library
-
-This helps showcase how `@stdlib` provides superior alternatives for common operations.
 ```
 
-📌 ## Stdlib Password Generator Demo
-This repo shows how you can build a simple, secure password generator using the @stdlib/random library. At its core, it uses the @stdlib/random/base/discrete-uniform function to randomly generate passwords based on user-selected options like length, symbols, numbers, and letter casing.
+## 📌 Stdlib Password Generator Demo
+
+#### This repo shows how you can build a simple, secure password generator using the @stdlib/random library. At its core, it uses the @stdlib/random/base/discrete-uniform function to randomly generate passwords based on user-selected options like length, symbols, numbers, and letter casing.
 
 Here’s what the project covers:
 
@@ -113,7 +83,40 @@ Here’s what the project covers:
 
 - A full working example with both frontend and backend components so users can try it out themselves
 
-🧠 ## How It Works
+## 🧠 How It Works
+
+- The user chooses the password settings (length, character types, etc).
+
+- The backend then builds a pool of characters based on those settings.
+
+- Using @stdlib/random/base/discrete-uniform, the app picks random indices to select characters from that pool.
+
+- Once the password is built, it's sent back to the frontend or any connected client.
+
+## 🔬 Why `@stdlib/random/base/discrete-uniform`?
+
+We chose `@stdlib/random/base/discrete-uniform` over `Math.random()` because:
+
+- It provides a uniform distribution over integers
+- It offers better control and safety in cryptographic-like scenarios
+- It's part of the reliable and well-tested `@stdlib` library
+
+This helps showcase how `@stdlib` provides superior alternatives for common operations.
+``
+
+## 📌 Stdlib Password Generator Demo
+
+#### This repo shows how you can build a simple, secure password generator using the @stdlib/random library. At its core, it uses the @stdlib/random/base/discrete-uniform function to randomly generate passwords based on user-selected options like length, symbols, numbers, and letter casing.
+
+Here’s what the project covers:
+
+- Using @stdlib/random to safely create strong, random passwords in JavaScript
+
+- A practical example of using @stdlib in a real-world backend app
+
+- A full working example with both frontend and backend components so users can try it out themselves
+
+## 🧠 How It Works
 
 - The user chooses the password settings (length, character types, etc).
 
@@ -133,7 +136,7 @@ We chose `@stdlib/random/base/discrete-uniform` over `Math.random()` because:
 
 This helps showcase how `@stdlib` provides superior alternatives for common operations.
 
-📁** Project Structure**
+## 📁 Project Structure
 
 ```bash
 password-generator-stdlib/
@@ -146,7 +149,7 @@ password-generator-stdlib/
 └── README.md              # This file
 ```
 
-🛠️ **Installation**
+## 🛠️ Installation
 
 # Clone the repository (if you haven't already)
 
@@ -155,13 +158,13 @@ git clone [https://github.com/dipexplorer/password-generator-stdlib.git](https:/
 cd password-generator-stdlib
 ```
 
-# **Install dependencies**
+# Install dependencies
 
 ```bash
 npm install
 ```
 
-# **Start the server**
+# Start the server
 
 ```bash
 npm start
@@ -175,46 +178,47 @@ Note: The @stdlib/random package should be listed as a dependency in your packag
 npm install @stdlib/random
 ```
 
-🤝** Contribution Guide**
+## 🤝 Contribution Guide
+
 We welcome contributions! 🙌
 
-**Fork the repository**
+- **Fork the repository**
 
-**Clone your fork:**
+- **Clone your fork:**
 
 ```bash
 git clone <your-fork-url>
 ```
 
-**Create a new branch:**
+- **Create a new branch:**
 
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
-**Commit your changes:**
+- **Commit your changes:**
 
 ```bash
 git commit -am "Add new feature"
 ```
 
-**Push to your fork:**
+- **Push to your fork:**
 
 ```bash
 git push origin feature/your-feature-name
 ```
 
-**Open a Pull Request** 🎉
+- **Open a Pull Request** 🎉
 
-📜 **License**
+## 📜 License
+
 This project is licensed under the MIT License.
 Feel free to use, modify, and share this for personal or professional use.
 
 Consider adding a full LICENSE file to your repository for clarity.
 
-🙌 **Acknowledgements**
-stdlib JS – For the secure random number generation
+## 🙌 Acknowledgements
 
-Tailwind CSS – For the utility-first CSS framework
-
-Express.js – For the Node.js web application framework
+- stdlib JS – For the secure random number generation
+- Tailwind CSS – For the utility-first CSS framework
+- Express.js – For the Node.js web application framework
